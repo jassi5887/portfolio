@@ -1,0 +1,53 @@
+.button {
+  text-decoration: none;
+  padding: 2rem 3.5rem;
+  border-radius: 1rem;
+  border: 0;
+  letter-spacing: .3rem;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      transform: translateX(1rem);
+    }
+  }
+
+  &--arr {
+    &::after {
+      content: "\2192";
+      position: absolute;
+      margin-left: 1rem;
+      transition: transform .4s;
+    }
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--link {
+    background-color: transparent;
+    color: $color-primary;
+    border-radius: 0;
+    text-transform: none;
+    padding: 0;
+    font-weight: bold;
+    margin-right: 2rem;
+
+    &:hover::after {
+      margin-left: 1rem;
+    }
+  
+    &::after {
+      content: "\02192";
+      margin-left: .5rem;
+      transition: margin-left .4s;
+    }
+  }
+
+  &__primary {
+    font-weight: bold;
+  }
+}

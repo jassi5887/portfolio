@@ -1,0 +1,97 @@
+.gradient-back {
+  background-image: linear-gradient(
+        to right bottom,
+        rgba(#7045af, 0.8),
+        rgba(#e14594, 0.8));
+}
+
+.navActive {
+  overflow: hidden;
+  position: relative;
+  
+  &.gradient-back {
+    background-image: none;
+  }
+
+  @include respond(tab-port) {
+    .left-bar {
+      flex-direction: row;
+      width: 100%;
+      left: 0;
+      top: 8rem !important;
+      min-height: auto;
+      align-items: center;
+      padding: 1rem;
+      background-color: #fff;
+      z-index: 99;
+      border-radius: 0;
+      overflow-x: auto; 
+
+      &__item {
+        margin-bottom: 0;
+        margin: 0 3.5rem;
+      }
+
+      &__image {
+        width: 5rem;
+      }
+    }
+  }
+
+
+  @include respond(phone) {
+    .left-bar {
+      &__item {
+        margin-bottom: 0;
+        margin: 0 2rem;
+      }
+    }
+  }
+
+
+  .nav {
+    top: 0;
+  }
+
+  .left-bar {
+    top: 15%;
+  }
+
+  .content {
+    display: flex;
+    height: 100vh;
+    padding-left: 30rem;
+    padding-top: 12rem;
+    overflow-y: auto;
+
+    @include respond(tab-land) {
+      padding-left: 18rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 20rem 5rem;
+    }
+  }
+
+  .card__main {
+    top: -50rem;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.inline-info {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: $color-grey-light-1;
+  padding: 2rem 3rem;
+  max-width: 80rem;
+}
+
+.underline {
+  border-bottom: 1px solid $color-grey-dark-2;
+  display: inline-block;
+  padding-bottom: 1rem;
+}

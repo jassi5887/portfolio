@@ -1,0 +1,28 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  width: 60rem;
+
+  &__section:first-child {
+    margin-top: 2rem;
+  }
+
+  &__section:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $color-grey-dark-2;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(tab-port) {
+    width: auto;
+  }
+
+}

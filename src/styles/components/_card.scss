@@ -1,0 +1,56 @@
+.card {
+
+  &__main {
+    @include absCenter;
+    @include boxShadow;
+    top: 30%;
+    transition: all .4s;
+    min-width: 45rem;    
+
+    display: flex;
+    align-items: center;
+    background-color: $color-white;
+    padding: 2rem;
+    border-radius: 2rem;
+    
+    @include respond(phone) {
+      top: 20%;
+    }
+
+    &__image {
+      margin-right: 2rem;
+
+      & > img {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+      }
+    }
+
+    &__cta {
+      @include absCenter;
+      @include boxShadow;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      top: auto;
+      bottom: -70%;
+      background-color: #4ab8b8;
+      color: $color-white;
+
+      &--block {
+        width: 40rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+
+}
