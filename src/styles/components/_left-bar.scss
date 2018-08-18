@@ -103,6 +103,34 @@
   }
 
   @include respond(tab-port) {
+    top: 8rem !important;
+    left: -100rem;
     min-height: 10rem !important;
+
+    flex-direction: row;
+    width: 100%;
+    min-height: auto;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    z-index: 99;
+    border-radius: 0;
+    overflow-x: auto; 
+
+    &__item {
+      margin-bottom: 0;
+      margin: 0 3.5rem;
+    }
+
+    &__image {
+      width: 5rem;
+    }
+  }
+
+  @include respond(phone) {
+    &__item {
+      margin-bottom: 0;
+      margin: 0 2rem;
+    }
   }
 }
