@@ -43,6 +43,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
 ::selection {
     background-color: $color-select;
     color: $color-white;
