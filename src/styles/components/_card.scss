@@ -1,18 +1,28 @@
 .card {
 
+  &__warning {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    background: #ffb900;
+    width: 100%;
+    opacity: .7;
+    z-index: 9;
+  }
+
   &__main {
     @include absCenter;
     @include boxShadow;
     top: 30%;
     transition: all .4s;
-    min-width: 45rem;    
+    min-width: 45rem;
 
     display: flex;
     align-items: center;
     background-color: $color-white;
     padding: 2rem;
     border-radius: 2rem;
-    
+
     @include respond(phone) {
       top: 30%;
       min-width: 40rem;
